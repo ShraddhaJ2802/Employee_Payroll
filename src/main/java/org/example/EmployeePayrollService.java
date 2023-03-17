@@ -1,6 +1,8 @@
 package org.example;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -95,4 +97,17 @@ public class EmployeePayrollService {
             }
             return entries;
         }
+
+    public void fileReader(){
+        try {
+            BufferedReader b = new BufferedReader(new FileReader("C:\\Users\\Icon\\IdeaProjects\\Employee_Payroll_Service\\src\\main\\resources\\Employee_Payroll.txt"));
+            String s;
+            while ((s = b.readLine()) != null){
+                System.out.println(s);
+            }
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
 }

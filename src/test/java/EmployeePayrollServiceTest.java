@@ -16,6 +16,7 @@ public class EmployeePayrollServiceTest {
         employeePayrollService.writeEmployeePayrollData();
         employeePayrollService.printData(EmployeePayrollService.IOService.FILE_IO);
         employeePayrollService.countEntries(EmployeePayrollService.IOService.FILE_IO);
+        employeePayrollService.fileReader();
     }
 
 
