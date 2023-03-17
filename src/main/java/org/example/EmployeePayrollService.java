@@ -49,7 +49,7 @@ public class EmployeePayrollService {
         employeePayrollList.add(new EmployeePayrollData(id, name, salary));
     }
 
-    private void writeEmployeePayrollData() {
+    public void writeEmployeePayrollData() {
         System.out.println("\nWriting Employee Payroll to console\n" + employeePayrollList);
         // public void writeEmployeePayrollData() {
         checkFile();
@@ -81,7 +81,8 @@ public class EmployeePayrollService {
         }
         public void printData(IOService ioService) {
             if (ioService.equals(FILE_IO))
-                new EmployeePayrollFileIOService().printData();
+                if (ioService.equals(IOService.FILE_IO))
+                    new EmployeePayrollFileIOService().printData();
 
         }
 
